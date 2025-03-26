@@ -2,7 +2,10 @@ const work = require("../models/works.model");
 
 const getWorks = async (_req, res) => {
   try {
-    const workRes = await work.find({});
+    const workRes = await work
+      .find({})
+      .populate("category", "category")
+      .populate("role", "role");
     res.status(200).json({ status: "success", worksList: workRes });
   } catch (error) {
     res.status(500).json({ status: "failure", error: error.message });
