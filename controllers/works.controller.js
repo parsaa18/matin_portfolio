@@ -15,7 +15,10 @@ const getWorks = async (_req, res) => {
 const getWorkByTitle = async (req, res) => {
   try {
     const { title } = req.params;
-    const result = await work.find({ title });
+    const result = await work
+      .find({ title })
+      .populate("category", "category")
+      .populate("role", "role");
     if (result.length) {
       res.status(200).json({ status: "success", work: result });
     } else {
