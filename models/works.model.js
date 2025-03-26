@@ -15,7 +15,7 @@ const workSchema = mongoose.Schema(
     media: { type: [String], required: false },
     date: { type: Date, required: true },
     role: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: [mongoose.Schema.Types.ObjectId],
       ref: "role",
       required: [true, "role is required"],
     },
