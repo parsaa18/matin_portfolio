@@ -5,6 +5,7 @@ const workSchema = mongoose.Schema(
     title: { type: String, required: [true, "title is required"] },
     description: { type: String, required: [true, "description is required"] },
     thumbnail: { type: String, required: [true, "thumbnail is required"] },
+    color: {type: String , required: [true, "color is required"]},
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "category",
