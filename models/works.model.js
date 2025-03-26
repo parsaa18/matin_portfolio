@@ -8,7 +8,7 @@ const workSchema = mongoose.Schema(
     colorBg: {type: String , required: [true, "colorBg is required"]},
     colorName: {type: String , required: [true, "colorName is required"]},
     category: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: [mongoose.Schema.Types.ObjectId],
       ref: "category",
       required: [true, "category is required"],
     },
