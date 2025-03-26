@@ -5,8 +5,8 @@ const workSchema = mongoose.Schema(
     title: { type: String, required: [true, "title is required"] },
     description: { type: String, required: [true, "description is required"] },
     thumbnail: { type: String, required: [true, "thumbnail is required"] },
-    colorBg: {type: String , required: [true, "color is required"]},
-    colorName: {type: String , required: [true, "color is required"]},
+    colorBg: {type: String , required: [true, "colorBg is required"]},
+    colorName: {type: String , required: [true, "colorName is required"]},
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "category",
