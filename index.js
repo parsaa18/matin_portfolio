@@ -4,6 +4,8 @@ const workRouter = require("./routes/work.route");
 const roleRouter = require("./routes/role.route");
 const categoryRouter = require("./routes/category.route");
 const messageRouter = require("./routes/message.route");
+const commentRouter = require("./routes/comment.route");
+
 const cors = require("cors");
 
 const app = express();
@@ -30,5 +32,5 @@ app.get("/", (_req, res) => {
 app.use("/api/works", workRouter);
 app.use("/api/role", roleRouter);
 app.use("/api/category", categoryRouter);
-
+app.use("/api/comment", commentRouter);
 app.use("/api/messages", messageRouter);
